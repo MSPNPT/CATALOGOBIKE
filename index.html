@@ -17,7 +17,7 @@
             margin: 10px;
             text-align: center;
             transition: transform 0.3s ease-in-out;
-            max-width: 45%;  /* Ajusta el ancho máximo de los productos */
+            max-width: 45%;
             box-sizing: border-box;
             display: inline-block;
             vertical-align: top;
@@ -41,6 +41,10 @@
 
         #paymentOptions {
             margin-top: 20px;
+        }
+
+        #adminPanel {
+            display: none;
         }
     </style>
 </head>
@@ -176,7 +180,8 @@
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
 
-        html2pdf().from(cartContent).set(options).outputPdf();
+        var element = document.getElementById('cart');
+        html2pdf(element, options);
     }
 
     function resetCart() {
