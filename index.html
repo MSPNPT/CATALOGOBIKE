@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,7 +17,7 @@
             margin: 10px;
             text-align: center;
             transition: transform 0.3s ease-in-out;
-            max-width: 30%;
+            max-width: 45%;  /* Ajusta el ancho máximo de los productos */
             box-sizing: border-box;
             display: inline-block;
             vertical-align: top;
@@ -36,16 +37,6 @@
             border: 1px solid #333;
             padding: 10px;
             margin-top: 20px;
-        }
-
-        #adminPanel {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: #fff;
-            padding: 10px;
-            border: 1px solid #ccc;
-            display: none;
         }
 
         #paymentOptions {
@@ -107,6 +98,9 @@
     </form>
 </div>
 
+<!-- Biblioteca html2pdf.js -->
+<script src="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.bundle.js"></script>
+
 <script>
     var cart = [];
 
@@ -159,13 +153,30 @@
     function payWithCard() {
         // Simulación de pago con tarjeta Visa
         alert('Pagando con Tarjeta Visa. ¡Gracias por tu compra!');
+        generateReceipt();
         resetCart();
     }
 
     function generateVoucher() {
         // Simulación de generación de comprobante (voucher)
         alert('Generando Comprobante (Voucher). ¡Gracias por tu compra!');
+        generateReceipt();
         resetCart();
+    }
+
+    function generateReceipt() {
+        // Generar PDF con html2pdf.js
+        var cartContent = document.getElementById('cart').innerHTML;
+
+        var options = {
+            margin: 10,
+            filename: 'comprobante.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().from(cartContent).set(options).outputPdf();
     }
 
     function resetCart() {
