@@ -170,7 +170,7 @@
 
     function generateReceipt() {
         // Generar PDF con html2pdf.js
-        var cartContent = document.getElementById('cart').innerHTML;
+        var cartContent = document.getElementById('cart').cloneNode(true);
 
         var options = {
             margin: 10,
@@ -180,7 +180,9 @@
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
 
-        var element = document.getElementById('cart');
+        var element = document.createElement('div');
+        element.appendChild(cartContent);
+
         html2pdf(element, options);
     }
 
