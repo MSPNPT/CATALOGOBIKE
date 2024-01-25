@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATALOGO DE PRODUCTOS DE FIX SHOP BIKE </title>
+    <title>CATALOGO DE PRODUCTOS DE FIX SHOP BIKE</title>
     <link rel="stylesheet" href="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.css">
     <style>
         body {
@@ -33,42 +33,30 @@
             margin-bottom: 10px;
         }
 
-        #cart {
-            border: 1px solid #333;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        #paymentOptions {
-            margin-top: 20px;
-        }
-
-        #adminPanel {
-            display: none;
-        }
-    
         h1 {
             color: blue;
             text-align: center;
-            padding: 10px 20px; /* Ajusta el espacio dentro del cuadro */
-            border: 2px solid black; /* Establece un borde sólido de 2 píxeles en negro */
+            padding: 10px 20px;
+            border: 2px solid black;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         /* Estilo opcional para ajustar la posición de la imagen */
         .floating-image {
             position: fixed;
             bottom: 20px;
             right: 20px;
+        }
     </style>
 </head>
 <body>
 
 <h1>CATALOGO DE PRODUCTOS DE FIX SHOP BIKE</h1>
 
-<!-- Sección 1 -->
+<!-- Sección de productos -->
 <div class="section">
     <!-- Producto 1 -->
-    <div class="product" id="Asiento de gel">
+    <div class="product">
         <img src="asiento.jpg" alt="Asiento de gel">
         <h2>Asiento de gel</h2>
         <h2>ATOM</h2>
@@ -77,7 +65,7 @@
     </div>
 
     <!-- Producto 2 -->
-    <div class="product" id="Boton Bracker">
+    <div class="product">
         <img src="botonb.jpg" alt="Boton Bracker">
         <h2>Boton Bracker</h2>
         <h2>ATOM</h2>
@@ -86,82 +74,92 @@
     </div>
 
     <!-- Producto 3 -->
-    <div class="product" id="Casco">
-        <img src="casco1.png" alt="casco">
+    <div class="product">
+        <img src="casco1.png" alt="Casco rojo">
         <h2>Casco rojo</h2>
         <h2>ATOM</h2>
         <p>Precio: S/ 80.00</p>
-        <button onclick="addToCart('Casco', 80.00)">Añadir al Carrito</button>
+        <button onclick="addToCart('Casco rojo', 80.00)">Añadir al Carrito</button>
     </div>
+
     <!-- Producto 4 -->
-    <div class="product" id="Eje cuadrado">
+    <div class="product">
         <img src="ejec.jpg" alt="Eje cuadrado">
         <h2>Eje cuadrado</h2>
         <h2>ATOM</h2>
         <p>Precio: S/ 10.00</p>
         <button onclick="addToCart('Eje cuadrado', 10.00)">Añadir al Carrito</button>
     </div>
-        <!-- Producto 5 -->
-    <div class="product" id="Extractor de cadena">
+
+    <!-- Producto 5 -->
+    <div class="product">
         <img src="extractorcaden.jpg" alt="Extractor de cadena">
-        <h2>Extractor</h2>
-        <h2>de cadena</h2>
+        <h2>Extractor de cadena</h2>
+        <h2>ATOM</h2>
         <p>Precio: S/ 15.00</p>
         <button onclick="addToCart('Extractor de cadena', 15.00)">Añadir al Carrito</button>
     </div>
-       <!-- Producto 6 -->
-    <div class="product" id="Extractor de catalina">
+
+    <!-- Producto 6 -->
+    <div class="product">
         <img src="extractorkata.jpg" alt="Extractor de catalina">
-        <h2>Extractor</h2>
-        <h2>de catalina</h2>
+        <h2>Extractor de catalina</h2>
+        <h2>ATOM</h2>
         <p>Precio: S/ 17.00</p>
         <button onclick="addToCart('Extractor de catalina', 17.00)">Añadir al Carrito</button>
     </div>
-     <!-- Producto 7 -->
-    <div class="product" id="Pedal-clic">
+
+    <!-- Producto 7 -->
+    <div class="product">
         <img src="pedalclic.jpg" alt="Pedal-clic">
         <h2>Pedal-clic</h2>
         <h2>ATOM</h2>
         <p>Precio: S/ 115.00</p>
         <button onclick="addToCart('Pedal-clic', 115.00)">Añadir al Carrito</button>
     </div>
+
     <!-- Producto 8 -->
-    <div class="product" id="Manigueta Rojo">
+    <div class="product">
         <img src="puno rojo.jpg" alt="Manigueta Rojo">
         <h2>Manigueta Rojo</h2>
         <h2>ATOM</h2>
         <p>Precio: S/ 35.00</p>
         <button onclick="addToCart('Manigueta Rojo', 35.00)">Añadir al Carrito</button>
     </div>
-       <!-- Producto 9 -->
-    <div class="product" id="Manigueta plomo">
+
+    <!-- Producto 9 -->
+    <div class="product">
         <img src="puño plomo.jpg" alt="Manigueta plomo">
         <h2>Manigueta plomo</h2>
         <h2>ATOM</h2>
         <p>Precio: S/ 25.00</p>
         <button onclick="addToCart('Manigueta plomo', 25.00)">Añadir al Carrito</button>
     </div>
-     <!-- Producto 10 -->
-    <div class="product" id="Pedal-clic">
+
+    <!-- Producto 10 -->
+    <div class="product">
         <img src="puño azul.jpg" alt="Puño azul">
         <h2>Puño azul</h2>
         <h2>ATOM</h2>
         <p>Precio: S/ 25.00</p>
         <button onclick="addToCart('Puño azul', 25.00)">Añadir al Carrito</button>
     </div>
+
     <!-- Producto 11 -->
-    <div class="product" id="Pedal-clic">
+    <div class="product">
         <img src="Falongap.jpg" alt="Freno alonga plateado">
-        <h2>Freno alonga</h2>
-        <h2>plateado</h2>
+        <h2>Freno alonga plateado</h2>
+        <h2>ATOM</h2>
         <p>Precio: S/ 50.00</p>
         <button onclick="addToCart('Freno alonga plateado', 50.00)">Añadir al Carrito</button>
     </div>
 </div>
 
+<!-- Carrito de compras -->
 <h2>Carrito de Compras</h2>
 <div id="cart"></div>
 
+<!-- Opciones de pago -->
 <div id="paymentOptions" style="display: none;">
     <h2>Opciones de Pago</h2>
     <button onclick="payWithCard()">Pagar con Tarjeta Visa</button>
@@ -169,7 +167,7 @@
 </div>
 
 <!-- Panel de Administración -->
-<div id="adminPanel">
+<div id="adminPanel" style="display: none;">
     <h2>Panel de Administración</h2>
     <form id="updateForm">
         <label for="productName">Nombre del Producto:</label>
@@ -211,45 +209,24 @@
         cartContainer.innerHTML += '<hr>';
         cartContainer.innerHTML += '<p>Total: S/ ' + total.toFixed(2) + '</p>';
 
-        // Mostrar opciones de pago al menos un producto en el carrito
         if (cart.length > 0) {
             document.getElementById('paymentOptions').style.display = 'block';
         }
     }
 
-    function updatePrice() {
-        var productName = document.getElementById('productName').value;
-        var newPrice = parseFloat(document.getElementById('newPrice').value);
-
-        // Actualizar el precio del producto (puedes mejorar esta lógica según tus necesidades)
-        var productElement = document.getElementById('product' + productName);
-        if (productElement) {
-            var priceElement = productElement.querySelector('p');
-            if (priceElement) {
-                priceElement.innerHTML = 'Precio: S/ ' + newPrice.toFixed(2);
-            }
-        }
-
-        // Ocultar el panel de administración
-        document.getElementById('adminPanel').style.display = 'none';
-    }
-
     function payWithCard() {
-        // Simulación de pago con tarjeta Visa
         alert('Pagando con Tarjeta Visa. ¡Gracias por tu compra!');
         generateReceipt();
         resetCart();
     }
 
     function generateVoucher() {
-        // Simulación de generación de comprobante (voucher)
         alert('Generando Comprobante (Voucher). ¡Gracias por tu compra!');
         generateReceipt();
         resetCart();
     }
 
     function generateReceipt() {
-        // Generar PDF con html2pdf.js
         var cartContent = document.getElementById('cart').cloneNode(true);
 
         var options = {
@@ -263,13 +240,19 @@
         var element = document.createElement('div');
         element.appendChild(cartContent);
 
-        html2pdf(element, options);
+        html2pdf().from(element).set(options).save();
     }
 
     function resetCart() {
         cart = [];
         updateCart();
         document.getElementById('paymentOptions').style.display = 'none';
+    }
+
+    // Función para mostrar/ocultar el panel de administración
+    function toggleAdminPanel() {
+        var adminPanel = document.getElementById('adminPanel');
+        adminPanel.style.display = (adminPanel.style.display === 'none') ? 'block' : 'none';
     }
 
     // Mostrar/ocultar el panel de administración al presionar cierta combinación de teclas
@@ -279,13 +262,30 @@
         }
     });
 
-    function toggleAdminPanel() {
-        var adminPanel = document.getElementById('adminPanel');
-        adminPanel.style.display = (adminPanel.style.display === 'none') ? 'block' : 'none';
+    // Función para actualizar el precio del producto
+    function updatePrice() {
+        var productName = document.getElementById('productName').value;
+        var newPrice = parseFloat(document.getElementById('newPrice').value);
+
+        // Actualizar el precio del producto (puedes mejorar esta lógica según tus necesidades)
+        var productElement = document.getElementById('product' + productName);
+        if (productElement) {
+            var priceElement = productElement.querySelector('p');
+            if (priceElement) {
+                priceElement.innerHTML = 'Precio: S/ ' + newPrice.toFixed(2);
+            }
+        }
+
+        // Ocultar el panel de administración después de actualizar el precio
+        document.getElementById('adminPanel').style.display = 'none';
     }
 </script>
+
+<!-- Imagen flotante de WhatsApp -->
 <a href="https://wa.me/955374354" target="_blank" class="floating-image">
-    <img src="Boton Whatsapp.png" alt="Consulta por whatsap" width="280" height="99">
+    <img src="Boton Whatsapp.png" alt="Consulta por WhatsApp" width="280" height="99">
 </a>
+
 </body>
 </html>
+
