@@ -225,7 +225,7 @@
     }
 
     function generateVoucher() {
-        alert('Generando Comprobante (Voucher). ¡Gracias por tu compra!');
+        alert('Generando Comprobante (Voucher). ¡Gracias por tu compra enviar al whatsap!');
         generateReceipt();
         resetCart();
     }
@@ -251,37 +251,6 @@
         cart = [];
         updateCart();
         document.getElementById('paymentOptions').style.display = 'none';
-    }
-
-    // Función para mostrar/ocultar el panel de administración
-    function toggleAdminPanel() {
-        var adminPanel = document.getElementById('adminPanel');
-        adminPanel.style.display = (adminPanel.style.display === 'none') ? 'block' : 'none';
-    }
-
-    // Mostrar/ocultar el panel de administración al presionar cierta combinación de teclas
-    document.addEventListener('keydown', function (event) {
-        if (event.ctrlKey && event.altKey && event.code === 'KeyP') {
-            toggleAdminPanel();
-        }
-    });
-
-    // Función para actualizar el precio del producto
-    function updatePrice() {
-        var productName = document.getElementById('productName').value;
-        var newPrice = parseFloat(document.getElementById('newPrice').value);
-
-        // Actualizar el precio del producto (puedes mejorar esta lógica según tus necesidades)
-        var productElement = document.getElementById('product' + productName);
-        if (productElement) {
-            var priceElement = productElement.querySelector('p');
-            if (priceElement) {
-                priceElement.innerHTML = 'Precio: S/ ' + newPrice.toFixed(2);
-            }
-        }
-
-        // Ocultar el panel de administración después de actualizar el precio
-        document.getElementById('adminPanel').style.display = 'none';
     }
 </script>
 </body>
